@@ -1,14 +1,10 @@
-echo "Enter the number -"
-read n
+echo -n "Enter a number: "
+read number
 
-i=1
+counter=1
 
-while ((i<10)) 
+while [ $counter -le 10 ]
 do
-
-res=`expr $i \* $n`
-echo "$n * $i = $res"
-
-((++i))
-    
+    echo "$number x $counter = $(( $number * $counter ))"
+    counter=$(( $counter+1 ))
 done
